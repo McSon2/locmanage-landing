@@ -7,7 +7,7 @@ export const LEGAL_LINKS = {
   support: "/support",
 };
 
-export const SITE_URL = "https://locmanage.app";
+export const SITE_URL = "https://locmanage.com";
 
 export const FEATURES = [
   {
