@@ -45,7 +45,7 @@ export function Features() {
                 >
                   <Image
                     src={f.screenshot}
-                    alt={`LocManage — ${f.title}`}
+                    alt={f.alt || `LocManage — ${f.title}`}
                     width={985}
                     height={2023}
                     className="w-full h-auto drop-shadow-[0_20px_50px_rgba(26,18,9,0.18)] dark:drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"

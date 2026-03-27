@@ -1,10 +1,10 @@
 export const APP_STORE_URL =
   "https://apps.apple.com/us/app/locmanage-gestion-locative/id6748564235";
 
-export const EXTERNAL_LINKS = {
-  terms: "https://locmanage-signing.vercel.app/terms.html",
-  privacy: "https://locmanage-signing.vercel.app/privacy.html",
-  support: "https://locmanage-signing.vercel.app/support.html",
+export const LEGAL_LINKS = {
+  terms: "/terms",
+  privacy: "/privacy",
+  support: "/support",
 };
 
 export const SITE_URL = "https://locmanage.app";
@@ -15,6 +15,7 @@ export const FEATURES = [
     description:
       "Ajoutez et organisez vos propriétés avec photos, surfaces et caractéristiques. Suivez la valeur de votre patrimoine immobilier en un coup d'œil.",
     screenshot: "/screenshots/01_patrimoine.webp",
+    alt: "Tableau de bord de gestion du patrimoine immobilier sur iPhone",
     bullets: [
       "Photos et caractéristiques détaillées",
       "Gestion des pièces par bien",
@@ -26,6 +27,7 @@ export const FEATURES = [
     description:
       "Créez des fiches locataires complètes avec coordonnées et documents. Invitez-les avec un code unique pour leur donner accès à leur espace dédié.",
     screenshot: "/screenshots/02_locataires.webp",
+    alt: "Gestion des fiches locataires et invitation par code unique",
     bullets: [
       "Fiches locataires complètes",
       "Invitation par code unique",
@@ -37,6 +39,7 @@ export const FEATURES = [
     description:
       "Tableau de bord financier avec vue mensuelle. Identifiez instantanément les paiements en retard et envoyez des rappels par email.",
     screenshot: "/screenshots/03_loyers.webp",
+    alt: "Suivi des loyers et paiements en retard avec alertes automatiques",
     bullets: [
       "Aperçu financier mensuel",
       "Alertes de retard de paiement",
@@ -49,6 +52,7 @@ export const FEATURES = [
     description:
       "Gérez vos baux avec dates, loyers, charges et dépôts de garantie. Vérification automatique de la conformité légale française 2024.",
     screenshot: "/screenshots/04_baux.webp",
+    alt: "Génération de contrat de bail conforme à la législation française 2024",
     bullets: [
       "Conformité législation française 2024",
       "Identifiant fiscal et annexes obligatoires",
@@ -61,6 +65,7 @@ export const FEATURES = [
     description:
       "Signez électroniquement vos documents directement sur l'appareil. Envoyez un lien de signature à distance aux locataires absents.",
     screenshot: "/screenshots/05_signature.webp",
+    alt: "Signature électronique de documents locatifs sur iPhone",
     bullets: [
       "Signature électronique sur l'appareil",
       "Lien de signature à distance",
@@ -72,6 +77,7 @@ export const FEATURES = [
     description:
       "Réalisez des états des lieux d'entrée et de sortie organisés par pièce. Ajoutez des photos et exportez un PDF professionnel.",
     screenshot: "/screenshots/06_etats.webp",
+    alt: "État des lieux numérique avec photos et export PDF",
     bullets: [
       "Checklist par pièce",
       "Ajout de photos",
@@ -84,6 +90,7 @@ export const FEATURES = [
     description:
       "Gérez les demandes de location avec toutes les informations financières du candidat. Suivez le statut de chaque candidature.",
     screenshot: "/screenshots/07_candidatures.webp",
+    alt: "Gestion des candidatures locatives et dossiers de location",
     bullets: [
       "Dossier candidat complet",
       "Informations financières",

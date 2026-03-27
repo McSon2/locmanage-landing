@@ -28,8 +28,13 @@ const signals = [
 
 export function Trust() {
   return (
-    <section className="border-t border-border bg-white py-20 dark:bg-[#1A1108]">
+    <section id="confiance" className="border-t border-border bg-white py-20 dark:bg-[#1A1108]">
       <div className="mx-auto max-w-5xl px-6">
+        <ScrollReveal>
+          <h2 className="mb-12 text-center font-serif text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold tracking-tight text-ink dark:text-[#F5EDE0]">
+            Sécurité et conformité
+          </h2>
+        </ScrollReveal>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {signals.map((signal, i) => (
             <ScrollReveal key={signal.title} delay={i * 0.08}>

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { APP_STORE_URL, EXTERNAL_LINKS } from "@/lib/constants";
+import Link from "next/link";
+import { APP_STORE_URL, LEGAL_LINKS } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -37,30 +38,24 @@ export function Footer() {
               Légal
             </h3>
             <div className="flex flex-col gap-2.5">
-              <a
-                href={EXTERNAL_LINKS.terms}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={LEGAL_LINKS.terms}
                 className="text-sm text-ink-secondary transition-colors hover:text-ink dark:text-[#B8A890] dark:hover:text-[#F5EDE0]"
               >
                 Conditions d&apos;utilisation
-              </a>
-              <a
-                href={EXTERNAL_LINKS.privacy}
-                target="_blank"
-                rel="noopener noreferrer"
+              </Link>
+              <Link
+                href={LEGAL_LINKS.privacy}
                 className="text-sm text-ink-secondary transition-colors hover:text-ink dark:text-[#B8A890] dark:hover:text-[#F5EDE0]"
               >
                 Politique de confidentialité
-              </a>
-              <a
-                href={EXTERNAL_LINKS.support}
-                target="_blank"
-                rel="noopener noreferrer"
+              </Link>
+              <Link
+                href={LEGAL_LINKS.support}
                 className="text-sm text-ink-secondary transition-colors hover:text-ink dark:text-[#B8A890] dark:hover:text-[#F5EDE0]"
               >
                 Support
-              </a>
+              </Link>
             </div>
           </div>
 

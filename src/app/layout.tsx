@@ -51,6 +51,30 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "LocManage",
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/app-icon.png`,
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "maxime.saltet@gmail.com",
+    contactType: "customer support",
+    availableLanguage: "French",
+  },
+};
+
+const webSiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "LocManage",
+  url: SITE_URL,
+  description:
+    "Application de gestion locative pour propriétaires et locataires sur iPhone.",
+  inLanguage: "fr",
+};
+
 const softwareAppJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -95,6 +119,18 @@ export default function RootLayout({
     >
       <head>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(webSiteJsonLd),
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -13,7 +13,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function Fiscal() {
   return (
-    <section className="bg-white py-24 dark:bg-[#1A1108] lg:py-32">
+    <section id="fiscal" className="bg-white py-24 dark:bg-[#1A1108] lg:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
