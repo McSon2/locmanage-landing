@@ -22,7 +22,8 @@ const plans = [
   },
   {
     name: "Premium",
-    price: "Voir sur l'App Store",
+    price: "4,99 €",
+    period: "/mois",
     description: "Pour les propriétaires multi-biens.",
     features: [
       "Propriétés illimitées",
@@ -40,7 +41,7 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="tarifs" className="bg-white py-24 dark:bg-[#1A1108] lg:py-32">
+    <section id="tarifs" className="bg-cream py-24 dark:bg-[#141008] lg:py-32">
       <div className="mx-auto max-w-4xl px-6">
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
@@ -60,7 +61,7 @@ export function Pricing() {
               <div
                 className={`relative flex h-full flex-col rounded-2xl p-8 ${
                   plan.highlighted
-                    ? "border-2 border-rich-gold bg-ink text-white"
+                    ? "border-2 border-rich-gold bg-cream dark:bg-[#221A10]"
                     : "border border-border bg-cream dark:bg-[#221A10]"
                 }`}
               >
@@ -70,35 +71,22 @@ export function Pricing() {
                   </span>
                 )}
 
-                <h3
-                  className={`font-serif text-2xl font-bold ${
-                    plan.highlighted
-                      ? "text-white"
-                      : "text-ink dark:text-[#F5EDE0]"
-                  }`}
-                >
+                <h3 className="font-serif text-2xl font-bold text-ink dark:text-[#F5EDE0]">
                   {plan.name}
                 </h3>
 
-                <div className="mt-3">
-                  <span
-                    className={`text-3xl font-bold ${
-                      plan.highlighted
-                        ? "text-rich-gold"
-                        : "text-ink dark:text-[#F5EDE0]"
-                    }`}
-                  >
+                <div className="mt-3 flex items-baseline gap-1">
+                  <span className="text-3xl font-bold text-rich-gold">
                     {plan.price}
                   </span>
+                  {"period" in plan && plan.period && (
+                    <span className="text-sm text-ink-secondary dark:text-[#B8A890]">
+                      {plan.period}
+                    </span>
+                  )}
                 </div>
 
-                <p
-                  className={`mt-2 text-sm ${
-                    plan.highlighted
-                      ? "text-white/65"
-                      : "text-ink-secondary dark:text-[#B8A890]"
-                  }`}
-                >
+                <p className="mt-2 text-sm text-ink-secondary dark:text-[#B8A890]">
                   {plan.description}
                 </p>
 
@@ -108,13 +96,8 @@ export function Pricing() {
                       <Check
                         className="mt-0.5 size-4 flex-shrink-0 text-rich-gold"
                       />
-                      <span
-                        className={`text-sm ${
-                          plan.highlighted
-                            ? "text-white/80"
-                            : "text-ink/85 dark:text-[#D0C4B0]"
-                        }`}
-                      >
+                      <span className="text-sm text-ink/85 dark:text-[#D0C4B0]">
+
                         {feature}
                       </span>
                     </li>

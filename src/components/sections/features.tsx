@@ -39,9 +39,9 @@ export function Features() {
                   <Image
                     src={feature.screenshot}
                     alt={`LocManage — ${feature.title}`}
-                    width={280}
-                    height={608}
-                    className="drop-shadow-[0_16px_48px_rgba(26,18,9,0.2)] dark:drop-shadow-[0_16px_48px_rgba(0,0,0,0.5)]"
+                    width={660}
+                    height={1434}
+                    className="w-[260px] h-auto lg:w-[320px] drop-shadow-[0_16px_48px_rgba(26,18,9,0.2)] dark:drop-shadow-[0_16px_48px_rgba(0,0,0,0.5)]"
                   />
                 </ScrollReveal>
 

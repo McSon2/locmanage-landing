@@ -11,7 +11,7 @@ import {
 
 export function Faq() {
   return (
-    <section id="faq" className="bg-white py-24 dark:bg-[#1A1108] lg:py-32">
+    <section id="faq" className="bg-cream py-24 dark:bg-[#141008] lg:py-32">
       <div className="mx-auto max-w-3xl px-6">
         <ScrollReveal>
           <div className="text-center">

@@ -28,7 +28,7 @@ const signals = [
 
 export function Trust() {
   return (
-    <section className="border-t border-border bg-cream py-20 dark:bg-[#141008]">
+    <section className="border-t border-border bg-white py-20 dark:bg-[#1A1108]">
       <div className="mx-auto max-w-5xl px-6">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {signals.map((signal, i) => (

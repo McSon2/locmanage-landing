@@ -76,10 +76,10 @@ export function Hero() {
             <Image
               src="/screenshots/01_patrimoine.webp"
               alt="LocManage — Gestion de patrimoine immobilier sur iPhone"
-              width={320}
-              height={696}
+              width={660}
+              height={1434}
               preload
-              className="drop-shadow-[0_24px_64px_rgba(26,18,9,0.25)] dark:drop-shadow-[0_24px_64px_rgba(0,0,0,0.6)]"
+              className="w-[280px] h-auto lg:w-[360px] drop-shadow-[0_24px_64px_rgba(26,18,9,0.25)] dark:drop-shadow-[0_24px_64px_rgba(0,0,0,0.6)]"
             />
           </div>
         </ScrollReveal>
