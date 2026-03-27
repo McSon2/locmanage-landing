@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "LocManage",
     images: [
       {
-        url: "/images/og-image.png",
+        url: `${SITE_URL}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: "LocManage — Gestion locative sur iPhone",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "LocManage — Gestion locative simplifiée",
     description:
       "Gérez vos biens locatifs depuis votre iPhone avec élégance.",
-    images: ["/images/og-image.png"],
+    images: [`${SITE_URL}/opengraph-image`],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: SITE_URL },
