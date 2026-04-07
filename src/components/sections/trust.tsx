@@ -28,10 +28,10 @@ const signals = [
 
 export function Trust() {
   return (
-    <section id="confiance" className="border-t border-border bg-white py-20 dark:bg-[#1A1108]">
-      <div className="mx-auto max-w-5xl px-6">
+    <section id="confiance" className="bg-navy py-20 lg:py-28">
+      <div className="mx-auto max-w-[1080px] px-6">
         <ScrollReveal>
-          <h2 className="mb-12 text-center font-serif text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold tracking-tight text-ink dark:text-[#F5EDE0]">
+          <h2 className="mb-14 text-center text-[clamp(1.75rem,3.5vw,2.25rem)] font-light tracking-[-0.02em] text-white">
             Sécurité et conformité
           </h2>
         </ScrollReveal>
@@ -39,13 +39,13 @@ export function Trust() {
           {signals.map((signal, i) => (
             <ScrollReveal key={signal.title} delay={i * 0.08}>
               <div className="text-center">
-                <div className="mx-auto flex size-12 items-center justify-center rounded-2xl bg-rich-gold/10">
-                  <signal.icon className="size-5 text-rich-gold" />
+                <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-white/10">
+                  <signal.icon className="size-5 text-stripe-cyan" />
                 </div>
-                <h3 className="mt-4 text-sm font-semibold text-ink dark:text-[#F5EDE0]">
+                <h3 className="mt-4 text-[14px] font-medium text-white">
                   {signal.title}
                 </h3>
-                <p className="mt-1.5 text-xs leading-relaxed text-ink-secondary dark:text-[#B8A890]">
+                <p className="mt-1.5 text-[13px] font-light leading-relaxed text-white/60">
                   {signal.description}
                 </p>
               </div>

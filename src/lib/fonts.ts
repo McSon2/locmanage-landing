@@ -1,16 +1,15 @@
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Inter, Source_Code_Pro } from "next/font/google";
 
-export const cormorant = Cormorant_Garamond({
+export const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-serif",
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-sans",
   display: "swap",
 });
 
-export const dmSans = DM_Sans({
+export const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-sans",
+  weight: ["400", "500"],
+  variable: "--font-mono",
   display: "swap",
 });

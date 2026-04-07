@@ -18,22 +18,22 @@ export function Features() {
   return (
     <section
       id="fonctionnalites"
-      className="bg-white py-20 dark:bg-[#1A1108] lg:py-28"
+      className="bg-surface py-24 lg:py-32"
     >
-      <div className="mx-auto max-w-5xl px-6">
+      <div className="mx-auto max-w-[1080px] px-6">
         <ScrollReveal>
-          <h2 className="text-center font-serif text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-ink dark:text-[#F5EDE0]">
+          <h2 className="text-center text-[clamp(2rem,4vw,2.5rem)] font-light tracking-[-0.02em] text-navy">
             Tout ce dont vous avez besoin
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-center text-base leading-relaxed text-ink-secondary dark:text-[#B8A890]">
+          <p className="mx-auto mt-4 max-w-lg text-center text-[16px] font-light leading-relaxed text-slate">
             Une suite complète d&apos;outils pour simplifier votre gestion
             locative au quotidien.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <div className="mt-12 flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-14">
-            {/* Screenshot — all stacked, only active visible */}
+          <div className="mt-14 flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-16">
+            {/* Screenshot */}
             <div className="relative flex-shrink-0 w-[240px] sm:w-[260px] lg:w-[300px]">
               {FEATURES.map((f, i) => (
                 <motion.div
@@ -48,7 +48,7 @@ export function Features() {
                     alt={f.alt || `LocManage — ${f.title}`}
                     width={985}
                     height={2023}
-                    className="w-full h-auto drop-shadow-[0_20px_50px_rgba(26,18,9,0.18)] dark:drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                    className="shadow-stripe w-full h-auto rounded-[2rem]"
                   />
                 </motion.div>
               ))}
@@ -64,10 +64,10 @@ export function Features() {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.15, ease }}
                 >
-                  <h3 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-bold leading-tight text-ink dark:text-[#F5EDE0]">
+                  <h3 className="text-[clamp(1.5rem,3vw,1.75rem)] font-light leading-tight tracking-[-0.02em] text-navy">
                     {feature.title}
                   </h3>
-                  <p className="mt-3 text-[0.95rem] leading-relaxed text-ink-secondary dark:text-[#B8A890]">
+                  <p className="mt-3 text-[15px] font-light leading-relaxed text-slate">
                     {feature.description}
                   </p>
                   <ul className="mt-5 space-y-2.5">
@@ -81,9 +81,9 @@ export function Features() {
                           duration: 0.12,
                           ease,
                         }}
-                        className="flex items-start gap-2.5 text-sm text-ink/85 dark:text-[#D0C4B0]"
+                        className="flex items-start gap-2.5 text-[14px] text-navy/80"
                       >
-                        <Check className="mt-0.5 size-4 flex-shrink-0 text-rich-gold" />
+                        <Check className="mt-0.5 size-4 flex-shrink-0 text-stripe-green" />
                         {bullet}
                       </motion.li>
                     ))}
@@ -92,30 +92,30 @@ export function Features() {
               </AnimatePresence>
 
               {/* Navigation */}
-              <div className="mt-8 flex items-center gap-4">
+              <div className="mt-8 flex items-center gap-3">
                 <button
                   onClick={prev}
                   disabled={active === 0}
-                  className="flex size-10 items-center justify-center rounded-full border border-border transition-colors hover:bg-ink/[0.03] disabled:opacity-30 disabled:pointer-events-none dark:border-[#3D3025] dark:hover:bg-[#F5EDE0]/5"
+                  className="flex size-10 items-center justify-center rounded-full border border-border-soft transition-all hover:shadow-stripe-sm disabled:opacity-30 disabled:pointer-events-none"
                   aria-label="Fonctionnalité précédente"
                 >
-                  <ArrowLeft className="size-4 text-ink dark:text-[#F5EDE0]" />
+                  <ArrowLeft className="size-4 text-navy" />
                 </button>
                 <button
                   onClick={next}
                   disabled={active === FEATURES.length - 1}
-                  className="flex size-10 items-center justify-center rounded-full border border-border transition-colors hover:bg-ink/[0.03] disabled:opacity-30 disabled:pointer-events-none dark:border-[#3D3025] dark:hover:bg-[#F5EDE0]/5"
+                  className="flex size-10 items-center justify-center rounded-full border border-border-soft transition-all hover:shadow-stripe-sm disabled:opacity-30 disabled:pointer-events-none"
                   aria-label="Fonctionnalité suivante"
                 >
-                  <ArrowRight className="size-4 text-ink dark:text-[#F5EDE0]" />
+                  <ArrowRight className="size-4 text-navy" />
                 </button>
-                <span className="ml-1 text-sm tabular-nums text-ink-secondary dark:text-[#B8A890]">
+                <span className="ml-1 text-[13px] tabular-nums text-slate">
                   {active + 1} / {FEATURES.length}
                 </span>
                 {/* Progress bar */}
-                <div className="ml-auto h-0.5 w-24 overflow-hidden rounded-full bg-ink/10 dark:bg-[#F5EDE0]/10">
+                <div className="ml-auto h-0.5 w-24 overflow-hidden rounded-full bg-navy/10">
                   <motion.div
-                    className="h-full rounded-full bg-rich-gold"
+                    className="h-full rounded-full bg-stripe-purple"
                     initial={false}
                     animate={{
                       width: `${((active + 1) / FEATURES.length) * 100}%`,

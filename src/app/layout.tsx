@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { cormorant, dmSans } from "@/lib/fonts";
+import { inter, sourceCodePro } from "@/lib/fonts";
 import { SITE_URL, FAQ_ITEMS } from "@/lib/constants";
 import "./globals.css";
 
@@ -115,7 +115,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${cormorant.variable} ${dmSans.variable} antialiased`}
+      className={`${inter.variable} ${sourceCodePro.variable} antialiased`}
     >
       <head>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -144,7 +144,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="grain font-sans">{children}</body>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }

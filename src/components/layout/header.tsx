@@ -19,29 +19,22 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-40 transition-all duration-500",
+        "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
         scrolled
-          ? "bg-cream/80 dark:bg-[#141008]/80 backdrop-blur-xl shadow-[0_1px_0_0_rgba(0,0,0,0.06)]"
+          ? "bg-white/80 backdrop-blur-xl shadow-[0_1px_0_0_rgba(0,0,0,0.06)]"
           : "bg-transparent"
       )}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <nav className="mx-auto flex max-w-[1080px] items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2.5">
           <Image
             src="/images/app-icon.png"
             alt="LocManage"
-            width={36}
-            height={36}
-            className="rounded-lg dark:hidden"
+            width={32}
+            height={32}
+            className="rounded-lg"
           />
-          <Image
-            src="/images/app-icon-dark.png"
-            alt="LocManage"
-            width={36}
-            height={36}
-            className="rounded-lg hidden dark:block"
-          />
-          <span className="font-serif text-xl font-semibold tracking-tight text-ink dark:text-[#F5EDE0]">
+          <span className="text-[17px] font-semibold tracking-tight text-navy">
             LocManage
           </span>
         </Link>
@@ -51,7 +44,7 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-ink-secondary transition-colors hover:text-ink dark:text-[#B8A890] dark:hover:text-[#F5EDE0]"
+              className="text-[14px] font-normal text-slate transition-colors hover:text-navy"
             >
               {item.label}
             </a>
@@ -60,7 +53,7 @@ export function Header() {
             href={APP_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-9 items-center rounded-full bg-rich-gold px-5 text-sm font-medium text-white transition-all hover:bg-rich-gold-light active:scale-[0.98]"
+            className="inline-flex h-9 items-center rounded-md bg-stripe-purple px-4 text-[14px] font-medium text-white transition-colors hover:bg-stripe-purple-hover active:scale-[0.98]"
           >
             Télécharger
           </a>
@@ -68,18 +61,18 @@ export function Header() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="relative z-50 flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="relative z-50 flex h-9 w-9 flex-col items-center justify-center gap-1.5 rounded-md md:hidden"
           aria-label="Menu"
         >
           <span
             className={cn(
-              "h-px w-5 bg-ink transition-all duration-300 dark:bg-[#F5EDE0]",
+              "h-px w-5 bg-navy transition-all duration-300",
               mobileOpen && "translate-y-[3.5px] rotate-45"
             )}
           />
           <span
             className={cn(
-              "h-px w-5 bg-ink transition-all duration-300 dark:bg-[#F5EDE0]",
+              "h-px w-5 bg-navy transition-all duration-300",
               mobileOpen && "-translate-y-[3.5px] -rotate-45"
             )}
           />
@@ -93,14 +86,14 @@ export function Header() {
           mobileOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         )}
       >
-        <div className="border-t border-border bg-cream/95 px-6 py-6 backdrop-blur-xl dark:bg-[#141008]/95">
+        <div className="border-t border-border-soft bg-white/95 px-6 py-6 backdrop-blur-xl">
           <div className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-base font-medium text-ink dark:text-[#F5EDE0]"
+                className="text-[15px] font-medium text-navy"
               >
                 {item.label}
               </a>
@@ -109,7 +102,7 @@ export function Header() {
               href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex h-10 items-center justify-center rounded-full bg-rich-gold px-6 text-sm font-medium text-white"
+              className="mt-2 inline-flex h-10 items-center justify-center rounded-md bg-stripe-purple px-6 text-[14px] font-medium text-white"
             >
               Télécharger gratuitement
             </a>

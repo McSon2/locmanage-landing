@@ -28,18 +28,18 @@ export function TenantSpace() {
   return (
     <section
       id="espace-locataire"
-      className="bg-cream py-24 dark:bg-[#141008] lg:py-32"
+      className="bg-white py-24 lg:py-32"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-[1080px] px-6">
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center rounded-full border border-rich-gold/30 bg-rich-gold/10 px-3 py-1 text-xs font-medium text-rich-gold">
+            <span className="inline-flex items-center rounded-md border border-stripe-purple/20 bg-stripe-purple/[0.06] px-3 py-1 text-[12px] font-medium text-stripe-purple">
               Espace locataire
             </span>
-            <h2 className="mt-6 font-serif text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-ink dark:text-[#F5EDE0]">
+            <h2 className="mt-6 text-[clamp(2rem,4vw,2.5rem)] font-light tracking-[-0.02em] text-navy">
               Un espace dédié pour vos locataires
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-ink-secondary dark:text-[#B8A890]">
+            <p className="mt-4 text-[16px] font-light leading-relaxed text-slate">
               Invitez vos locataires avec un code unique au format
               XXX-XXX-XXX. Ils accèdent à leur espace personnel gratuitement.
             </p>
@@ -49,12 +49,14 @@ export function TenantSpace() {
         <div className="mt-16 grid gap-6 md:grid-cols-3">
           {benefits.map((benefit, i) => (
             <ScrollReveal key={benefit.title} delay={i * 0.1}>
-              <div className="h-full rounded-2xl border border-border bg-cream p-8 dark:bg-[#221A10]">
-                <benefit.icon className="size-6 text-rich-gold" />
-                <h3 className="mt-5 font-serif text-xl font-semibold text-ink dark:text-[#F5EDE0]">
+              <div className="shadow-stripe-sm h-full rounded-xl border border-border-soft bg-white p-8 transition-shadow hover:shadow-stripe">
+                <div className="inline-flex size-10 items-center justify-center rounded-lg bg-stripe-purple/[0.08]">
+                  <benefit.icon className="size-5 text-stripe-purple" />
+                </div>
+                <h3 className="mt-5 text-[18px] font-medium tracking-[-0.01em] text-navy">
                   {benefit.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-ink-secondary dark:text-[#B8A890]">
+                <p className="mt-2.5 text-[14px] font-light leading-relaxed text-slate">
                   {benefit.description}
                 </p>
               </div>
